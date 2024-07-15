@@ -21,6 +21,14 @@ html {
 .bg-light {
   background-color: rgba(255, 144, 14, 0.1);
 }
+main {
+  max-width: 1440px;
+  border: 2px solid red;
+  margin: 0 auto;
+}
+main section {
+  margin-top: 100px;
+}
 /* dark-1 */
 .dark {
   color: #131313;
@@ -74,7 +82,7 @@ html {
   font-size: 1.6rem;
   margin-bottom: 20px;
 }
-.btn-primary{
+.btn-primary {
   padding: 15px 25px;
   border: none;
   outline: none;
@@ -85,23 +93,95 @@ html {
   font-weight: 600;
   margin-bottom: 20px;
 }
-.banner img{
+.banner img {
   width: 100%;
-  border: 2px solid red;
 }
 
-@media screen and (max-width: 576px){
-  .navbar{
+/* team and feature section */
+.teams {
+  align-items: center;
+}
+.team-image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.our-features {
+  max-width: 530px;
+  border: 2px solid red;
+  margin-left: 20px;
+}
+.features-title {
+  font-size: 4.5rem;
+  line-height: 5.5rem;
+}
+#quick-list {
+  font-weight: 400;
+}
+#features {
+  color: rgba(255, 144, 14, 1);
+}
+.features-desc {
+  font-size: 1.6rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 2.5rem;
+}
+.teams button {
+  padding: 15px 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(255, 144, 14, 1);
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar {
     flex-direction: column;
   }
-  .nav-links{
+  .nav-links {
     flex-direction: column;
   }
   .banner-title {
     font-size: 3rem;
-    /* margin-bottom: 20px; */
   }
   .brand-title {
     font-size: 2.6rem;
+  }
+  .banner .image-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .teams {
+    flex-direction: column;
+  }
+  .team-image-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .features-title {
+    font-size: 3, 5rem;
+  }
+  .our-features {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .teams {
+    flex-direction: column;
+  }
+  .team-image-container img {
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-links {
+    margin-top: 20px;
+  }
+  .our-features {
+    margin-top: 10px;
   }
 }
